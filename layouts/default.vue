@@ -1,12 +1,14 @@
 <template>
   <div>
-    <header>Its header</header>
+    <Header />
     <NuxtPage/>
     <footer>its footer</footer>
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup >
+import Header from "~/components/Header/Header.vue"
+
 
 </script>
 
