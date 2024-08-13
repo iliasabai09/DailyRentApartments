@@ -67,9 +67,3 @@ export class HttpClient extends HttpClientAbstract {
 		})
 	}
 }
-
-
-export const useHttpClient = (api: string) => useFetch(``, {
-	method: 'get',
-	server: true
-})
