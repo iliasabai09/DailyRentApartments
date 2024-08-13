@@ -6,5 +6,5 @@ const BASE_URL = 'https://jsonplaceholder.typicode.com'
 
 export const useHttpClient = (api: string) => useFetch(`${BASE_URL}${api}`, {
 	method: 'get',
-	server: false
+	server: true
 })

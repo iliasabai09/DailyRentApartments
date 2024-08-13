@@ -1,12 +1,12 @@
 <template>
-  <h1>This is main page</h1>
+  <h1>{{ "data" }}{{ data }}</h1>
 </template>
 
 <script setup lang="ts">
-import { useHttpClient } from '../shared/api/httpClient'
+import { CityUseCase } from '../domain/useCases/City.useCase'
 
-const {data, error, status, pending} = useHttpClient('/todos/1')
-
+const city = new CityUseCase()
+const {data, error, status, pending} = city.getAllCities()
 </script>
 
 <style scoped>
