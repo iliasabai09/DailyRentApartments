@@ -32,6 +32,6 @@ import { ref } from 'vue'
 const dialog = ref(false)
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
