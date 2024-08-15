@@ -56,10 +56,23 @@ export default defineNuxtConfig({
       apiBase: '/api'
     }
   },
-  // components: [
-  //   {
-  //     path: '~/components',
-  //     pathPrefix: false,
-  //   },
-  // ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+      global: false
+    },
+    {
+      path: '~/components/ui',
+      pathPrefix: false,
+      global: false
+    },
+  ],
+  dirs: [
+    {
+      path: '~/components/ui',
+      global: false
+    },
+    '~/components/ui'
+  ]
 })

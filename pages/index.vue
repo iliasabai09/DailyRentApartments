@@ -1,11 +1,9 @@
 <template>
-  <h1 class="test">Ersin</h1>
-  <LIcon :icon="'menu'" scale="18"/>
-  <LIcon :icon="'close'" scale="18"/>
+  <h1>This is Main page</h1>
 </template>
 
 <script setup lang="ts">
-import LIcon from '../components/libs/LIcon.vue'</script>
+</script>
 
 <style scoped lang="scss">
 

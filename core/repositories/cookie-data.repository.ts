@@ -1,4 +1,5 @@
 import { useCookie } from 'nuxt/app'
+import { CookieEnum } from '../../shared/types/enums/cookie.enum'
 
 export class CookieDataRepository {
 	private readonly cookie
@@ -7,7 +8,7 @@ export class CookieDataRepository {
 		this.cookie = useCookie
 	}
 
-	getValue(key: string) {
+	getValue(key: CookieEnum) {
 		return this.cookie(key).value
 	}
 }

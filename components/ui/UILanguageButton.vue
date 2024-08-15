@@ -1,7 +1,7 @@
 <template>
   <button>
-    <img src="public/gifs/geolocation.gif" width="50" alt="loader"/>
-    <span class="TTextMedium">Алматы</span>
+    <LIcon :icon="'translate'" color="var(--primary)"/>
+    <span class="TSmallMedium">Русский</span>
   </button>
 </template>
 
@@ -17,8 +17,10 @@ button {
   align-items: center;
   cursor: pointer;
   transition: .4s ease;
-  padding: 0 16px 0 0;
+  padding: 0 16px;
   border-radius: 16px;
+  height: 40px;
+  gap: 4px;
   color: var(--primary);
 
   &:hover {
