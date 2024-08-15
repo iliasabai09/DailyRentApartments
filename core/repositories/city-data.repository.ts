@@ -11,6 +11,6 @@ export class CityDataRepository extends CityRepository {
 	}
 
 	getAllCities() {
-		return this.api.get(this.BASE_URL + '/todos/1')
+		return this.api.getSsr(this.BASE_URL + '/todos/1')
 	}
 }

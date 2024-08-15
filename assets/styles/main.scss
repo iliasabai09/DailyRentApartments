@@ -1,0 +1,11 @@
+@import 'null.scss';
+@import 'variables.scss';
+@import "utils";
+@import "typography";
+
+* {
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}

@@ -18,6 +18,9 @@ abstract class HttpClientAbstract {
 }
 
 export class HttpClient extends HttpClientAbstract {
+	constructor() {
+		super()
+	}
 
 	get(url: string): unknown {
 		return useFetch(url, {
