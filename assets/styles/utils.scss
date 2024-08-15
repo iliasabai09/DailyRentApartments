@@ -9,3 +9,15 @@
 .USpacer {
 	flex: 1;
 }
+
+.UDesktop {
+	@media (max-width: 768px) {
+		display: none;
+	}
+}
+
+.UMobile {
+	@media (min-width: 768px) {
+		display: none;
+	}
+}

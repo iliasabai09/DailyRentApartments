@@ -21,6 +21,13 @@ button {
   height: 40px;
   gap: 4px;
   color: var(--primary);
+/*  @media (max-width: 768px) {
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+  }*/
 
   &:hover {
     background-color: var(--hover-btn);

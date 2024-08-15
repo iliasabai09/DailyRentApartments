@@ -1,6 +1,6 @@
 <template>
   <button :style="{width:scale,height:scale}">
-    <LIcon :icon="icon" :iconColor="iconColor"/>
+    <LIcon :icon="icon" :iconColor="iconColor" :scale="iconScale"/>
   </button>
 </template>
 
@@ -22,7 +22,12 @@ defineProps({
     type: String,
     default: '40px',
     required: false
-  }
+  },
+  iconScale: {
+    type: String,
+    default: '25',
+    required: false
+  },
 })
 </script>
 
