@@ -25,6 +25,10 @@ import UiCreateCoworkingButton from '../ui/UiCreateCoworkingButton.vue'
 import UiIconButton from '../ui/UiIconButton.vue'</script>
 
 <style scoped lang="scss">
+header {
+  background-color: #fff;
+}
+
 .header {
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 <template>
   <button>
-    <LIcon :icon="'add'" color="var(--primary)"/>
-    <span class="TSmallMedium">Создать коворкинг</span>
+    <LIcon :icon="'add'" color="var(--primary)" scale="25"/>
+    <span class="TMiddleMedium">Создать коворкинг</span>
   </button>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <button>
-    <LIcon :icon="'translate'" color="var(--primary)"/>
-    <span class="TSmallMedium">Русский</span>
+    <LIcon :icon="'translate'" color="var(--primary)" scale="25"/>
+    <span class="TMiddleMedium">Русский</span>
   </button>
 </template>
 

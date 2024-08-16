@@ -1,7 +1,7 @@
 <template>
   <button>
-    <LIcon :icon="'account_circle'" color="var(--primary)"/>
-    <span class="TSmallMedium">Войти</span>
+    <LIcon :icon="'account_circle'" color="var(--primary)" scale="25"/>
+    <span class="TMiddleMedium">Войти</span>
   </button>
 </template>
 

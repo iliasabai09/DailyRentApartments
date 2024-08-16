@@ -1,6 +1,7 @@
 <template>
   <div class="nuxt">
     <HeaderModule/>
+    <BMainNavigation/>
     <NuxtPage/>
     <FooterModule/>
   </div>
@@ -12,7 +13,7 @@ import FooterModule from '../components/module/FooterModule.vue'</script>
 
 <style scoped>
 .nuxt {
-  background-color: var(--ligh-bg);
+  /*background-color: var(--ligh-bg);*/
   min-height: 100vh;
 }
 </style>
