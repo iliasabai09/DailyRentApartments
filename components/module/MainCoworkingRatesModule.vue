@@ -3,7 +3,10 @@
     <div class="rates">
       <div class="rates-title">Тарифы по коворкингам</div>
       <div class="rates-blocks">
-        <pre>{{ rates }}</pre>
+        <BRateCard :rate="rate" v-for="rate in rates"/>
+        <BRateCard :rate="rate" v-for="rate in rates"/>
+        <BRateCard :rate="rate" v-for="rate in rates"/>
+        <BRateCard :rate="rate" v-for="rate in rates"/>
       </div>
     </div>
   </div>
@@ -21,7 +24,7 @@ onMounted(() => {
   const init: IRate[] = [
     {
       id: '',
-      title: 'Офис на 4 места в коворкинге Телеграф Дмитровская',
+      title: 'Офис на 4 места в коворкинге Телеграф Дмитровская прпагвы апывашп пгшвпоа ыапывп врфыпаыроап вавы',
       paymentPeriod: 'месяц',
       price: 58000,
       floor: {number: 3, in: 10},
@@ -46,6 +49,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 100%;
 
   &-title {
     font-size: 28px;
@@ -54,8 +58,11 @@ onMounted(() => {
   }
 
   &-blocks {
-    display: flex;
-    gap: 24px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 16px;
+    justify-content: space-between;
   }
 }
 </style>

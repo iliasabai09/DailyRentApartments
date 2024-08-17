@@ -17,7 +17,7 @@ defineProps({
     required: true
   },
   color: {
-    type: String as PropType<'primary' | 'secondary' | 'info' | 'danger'>,
+    type: String as PropType<'primary' | 'secondary' | 'info' | 'danger' | 'warn'>,
     required: false,
     default: 'primary'
   },
@@ -56,6 +56,34 @@ button {
   &:not(:disabled):hover {
     transition: .3s ease;
     background-color: var(--primary-light);
+  }
+}
+
+.secondaryBtn {
+  color: var(--secondary);
+
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    transition: .3s ease;
+    background-color: var(--secondary-light);
+  }
+}
+
+.warnBtn {
+  color: var(--warn);
+
+  &:disabled {
+    color: gray;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    transition: .3s ease;
+    background-color: var(--warn-light);
   }
 }
 </style>
