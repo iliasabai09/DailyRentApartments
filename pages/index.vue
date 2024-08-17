@@ -1,10 +1,17 @@
 <template>
-  <h1>This is Main page</h1>
+  <div class="index">
+    <MainBannerModule/>
+  </div>
 </template>
 
 <script setup lang="ts">
 </script>
 
 <style scoped lang="scss">
-
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 16px 0;
+}
 </style>

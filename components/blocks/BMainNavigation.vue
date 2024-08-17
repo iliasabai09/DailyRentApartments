@@ -59,7 +59,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .navigationWrapper {
-  background-color: var(--ligh-bg);
+  background-color: #efefef;
 }
 
 .navigationBasic {

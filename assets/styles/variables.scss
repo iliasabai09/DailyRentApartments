@@ -1,17 +1,24 @@
 :root {
+	// colors
 	--primary: #001790;
-	--primary-light: #cef7ff;
-	--secondary: #00fff7;
-	--error: #d10404;
-	--warn: #eca825;
-	--gray: #aeaeae;
-	--gray-bg: #dfdfdf;
-	--ligh-bg: #f3f3f3;
-	--white-bg: #fff;
+	--primary-light: rgba(0, 23, 144, 0.1);
 
+	--secondary: #00fff7;
+	--secondary-light: rgba(0, 255, 247, 0.1);
+
+	--error: #d10404;
+	--error-light: #d10404;
+
+	--warn: #eca825;
+	--warn-light: #eca825;
+
+	--gray: #aeaeae;
+
+	// borers
 	--border-large: 16px;
 	--border-small: 8px;
 
+	// main hover
 	--hover-btn: #efefef;
 
 	--box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.2);

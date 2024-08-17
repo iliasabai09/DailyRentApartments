@@ -10,6 +10,14 @@
 	flex: 1;
 }
 
+.ULargeBr {
+	border-radius: 16px;
+}
+
+.USmallBr {
+	border-radius: 8px;
+}
+
 .UDesktop {
 	@media (max-width: 768px) {
 		display: none;
