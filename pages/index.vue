@@ -1,5 +1,6 @@
 <template>
   <div class="index">
+    <LModal :dialog-opened="false"/>
     <MainBannerModule/>
   </div>
 </template>

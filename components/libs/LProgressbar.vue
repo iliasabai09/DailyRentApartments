@@ -1,5 +1,5 @@
 <template>
-
+  <VProgressLinear color="var(--primary)" indeterminate/>
 </template>
 
 <script setup lang="ts">

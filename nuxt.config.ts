@@ -28,25 +28,9 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   compatibilityDate: '2024-04-03',
   css: ['~/assets/styles/main.scss'],
-  // build: {
-  //   transpile: ['vuetify']
-  // },
-  // modules: [
-  //   (_options: any, nuxt: any) => {
-  //     nuxt.hooks.hook('vite:extendConfig', (config: any) => {
-  //       config.plugins.push(vuetify({autoImport: true}))
-  //     })
-  //   }
-  // ],
-  // vite: {
-  //   vue: {
-  //     template: {
-  //       transformAssetUrls,
-  //     },
-  //   },
-  // },
   devtools: {enabled: true},
   runtimeConfig: {
     /*
@@ -62,6 +46,7 @@ export default defineNuxtConfig({
       apiBase: '/api'
     }
   },
+
   components: [
     {
       path: '~/components',
@@ -74,11 +59,22 @@ export default defineNuxtConfig({
       global: false
     },
   ],
+
   dirs: [
     {
       path: '~/components/ui',
       global: false
     },
     '~/components/ui'
-  ]
+  ],
+
+  modules: ['vuetify-nuxt-module'],
+  vuetify: {
+    moduleOptions: {
+      /* module specific options */
+    },
+    vuetifyOptions: {
+      /* vuetify options */
+    }
+  }
 })

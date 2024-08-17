@@ -1,6 +1,9 @@
 <template>
   <div class="nuxt">
     <HeaderModule/>
+    <div id="progressbar">
+      <LProgressbar/>
+    </div>
     <BMainNavigation/>
     <NuxtPage/>
     <FooterModule/>
@@ -13,7 +16,10 @@ import FooterModule from '../components/module/FooterModule.vue'</script>
 
 <style scoped>
 .nuxt {
-  /*background-color: var(--ligh-bg);*/
   min-height: 100vh;
+}
+
+#progressbar {
+  visibility: hidden;
 }
 </style>
