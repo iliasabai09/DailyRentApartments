@@ -13,7 +13,7 @@
               {{ link.title }}
             </div>
           </div>
-          <div class="selectedNavigation" :style="{left: selectedIdx * 20 + '%'}"></div>
+          <div class="selectedNavigation" :style="{left: selectedIdx * (100 / 6) + '%'}"></div>
         </div>
       </div>
     </div>
@@ -22,10 +22,15 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { navigateTo, useRoute } from 'nuxt/app'
 
 const selectedIdx = ref(0)
-
+const route = useRoute()
 const links = ref([
+  {
+    title: 'Главная',
+    link: '/'
+  },
   {
     title: 'Аренда оффисов',
     link: '/offices'
@@ -36,23 +41,26 @@ const links = ref([
   },
   {
     title: 'Реклама',
-    link: ''
+    link: '/advertising'
   },
   {
     title: 'Новости',
-    link: ''
+    link: '/news'
   },
   {
     title: 'Конслайтинг',
-    link: ''
+    link: '/consulting'
   }
 ])
 
 function selectNavigation(idx) {
   selectedIdx.value = idx
+  navigateTo(links.value[idx].link)
 }
 
 onMounted(() => {
+  const idx = links.value.findIndex(val => route.fullPath.includes(val.link))
+  if (idx) selectedIdx.value = idx
 })
 
 </script>
@@ -87,7 +95,7 @@ onMounted(() => {
   border-radius: 16px;
   position: absolute;
   z-index: 1;
-  width: 20%;
+  width: calc(100% / 6);
   top: 50%;
   transform: translateY(-50%);
   transition: .3s ease;
