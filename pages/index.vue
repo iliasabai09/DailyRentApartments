@@ -1,7 +1,7 @@
 <template>
   <div class="index">
-    <LModal :dialog-opened="false"/>
     <MainBannerModule/>
+    <AllKzCoworkingsModule/>
   </div>
 </template>
 
@@ -12,7 +12,7 @@
 .index {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 56px;
   margin: 16px 0;
 }
 </style>
