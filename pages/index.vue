@@ -2,6 +2,7 @@
   <div class="index">
     <MainBannerModule/>
     <AllKzCoworkingsModule/>
+    <MainCoworkingRatesModule/>
   </div>
 </template>
 

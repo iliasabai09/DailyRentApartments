@@ -1,5 +1,5 @@
-import { IConveniences, ICoworking, IWorkTimes } from '../interfaces/coworking.interface'
-import { IRate } from '../interfaces/rate.interface'
+import { type IConveniences, type ICoworking, type IWorkTimes } from '../interfaces/coworking.interface'
+import { type IRate } from '../interfaces/rate.interface'
 
 export class Coworking implements ICoworking {
 	readonly id: string

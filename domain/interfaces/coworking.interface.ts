@@ -1,4 +1,4 @@
-import { IRate } from './rate.interface'
+import { type IRate } from './rate.interface'
 
 export interface IWorkTimes {
 	readonly day: string;
