@@ -58,6 +58,10 @@
   &-text {
     font-size: 32px;
     color: #fff;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
   }
 }
 </style>

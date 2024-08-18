@@ -4,7 +4,7 @@
     <div id="progressbar">
       <LProgressbar/>
     </div>
-    <BMainNavigation/>
+    <BMainNavigation class="UDesktop"/>
     <NuxtPage/>
     <FooterModule/>
   </div>

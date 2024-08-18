@@ -51,11 +51,23 @@ const kzCoworkings = ref([
     font-size: 28px;
     text-align: center;
     font-style: italic;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   &-blocks {
     display: flex;
     gap: 24px;
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    @media (max-width: 768px) {
+      overflow-x: scroll;
+    }
   }
 }
 </style>

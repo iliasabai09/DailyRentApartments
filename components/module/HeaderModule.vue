@@ -7,11 +7,12 @@
           <UiLocationButton @openLocationModal="locationModal = true"/>
           <div class="USpacer"></div>
           <UiCreateCoworkingButton/>
-          <UILanguageButton :currentLocale="currentLocale" @selectLanguage="selectLanguage($event)"/>
+          <UILanguageButton v-if="isDesktop()" :currentLocale="currentLocale" @selectLanguage="selectLanguage($event)"/>
           <UiLoginButton/>
         </div>
         <div class="USpacer"></div>
-        <div class="UMobile">
+        <div v-if="!isDesktop()" class="header-mobileActions">
+          <UILanguageButton :currentLocale="currentLocale" @selectLanguage="selectLanguage($event)"/>
           <UiIconButton :icon="'menu'" scale="60px" icon-scale="30"/>
         </div>
       </div>
@@ -30,6 +31,7 @@ import UiCreateCoworkingButton from '../ui/UiCreateCoworkingButton.vue'
 import UiIconButton from '../ui/UiIconButton.vue'
 import { useCityUseCase } from '../../domain/useCases/LanguageUserCase'
 import { ref } from 'vue'
+import { isDesktop } from '../../shared/helpers/device'
 
 const currentLocale = ref(useCityUseCase.getLanguageLocale())
 const locationModal = ref(false)
@@ -54,6 +56,14 @@ header {
   width: 100%;
   height: 100px;
   gap: 32px;
+  @media (max-width: 768px) {
+    height: 60px;
+  }
+
+  &-mobileActions {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .specs {

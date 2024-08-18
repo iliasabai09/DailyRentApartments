@@ -55,6 +55,9 @@ onMounted(() => {
     font-size: 28px;
     text-align: center;
     font-style: italic;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
   }
 
   &-blocks {

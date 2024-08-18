@@ -104,6 +104,10 @@ footer {
   gap: 64px;
   justify-content: space-between;
   margin-bottom: 48px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .footer {
@@ -119,6 +123,9 @@ footer {
 
   &-header {
     margin-bottom: 24px;
+    @media (max-width: 768px) {
+      margin-bottom: 12px;
+    }
   }
 
   &-items {
@@ -132,6 +139,7 @@ footer {
     cursor: pointer;
     transition: .3s ease;
     width: fit-content;
+    color: #dfdfdf;
 
     &:hover {
       transition: .3s ease;

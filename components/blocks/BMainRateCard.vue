@@ -28,7 +28,6 @@ defineProps({
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
-  background-color: rgba(0, 255, 247, 0.04);
   cursor: pointer;
   border: 1px solid #cecece;
 

@@ -28,6 +28,7 @@ defineProps({
 <style scoped lang="scss">
 .card {
   width: 100%;
+  min-width: 320px;
 
   &-img {
     width: 100%;
@@ -43,6 +44,11 @@ defineProps({
     z-index: 1;
     text-align: center;
     margin-bottom: 12px;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
 
     &:hover {
       transform: scale(1.01);

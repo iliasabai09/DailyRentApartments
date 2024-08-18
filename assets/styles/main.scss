@@ -22,17 +22,17 @@ body {
 	scrollbar-color: #cccccc #fff;
 }
 
-*::-webkit-scrollbar {
+::-webkit-scrollbar {
 	width: 8px;
 	background: red;
 }
 
-*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
 	background-color: #e8e8e8;
 	width: 1px;
 }
 
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
 	background: #bcbcbc;
 	border-radius: 100px;
 }
