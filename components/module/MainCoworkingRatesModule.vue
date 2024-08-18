@@ -3,10 +3,10 @@
     <div class="rates">
       <div class="rates-title">Тарифы по коворкингам</div>
       <div class="rates-blocks">
-        <BRateCard :rate="rate" v-for="rate in rates"/>
-        <BRateCard :rate="rate" v-for="rate in rates"/>
-        <BRateCard :rate="rate" v-for="rate in rates"/>
-        <BRateCard :rate="rate" v-for="rate in rates"/>
+        <BMainRateCard :rate="rate" v-for="rate in rates"/>
+        <BMainRateCard :rate="rate" v-for="rate in rates"/>
+        <BMainRateCard :rate="rate" v-for="rate in rates"/>
+        <BMainRateCard :rate="rate" v-for="rate in rates"/>
       </div>
     </div>
   </div>

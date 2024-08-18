@@ -3,7 +3,7 @@
     <div class="card-img" :style="{backgroundImage: 'url(' + rate.images[0] + ')'}"></div>
     <div class="card-specs">
       <div class="card-title TTextLarge">{{ rate.title }}</div>
-      <div class="card-price TSmallLarge">{{ rate.price }}/{{ rate.paymentPeriod }}</div>
+      <div class="card-price TTextMedium">{{ rate.price }}/{{ rate.paymentPeriod }}</div>
       <div class="card-actions">
         <LButtonOutlined :title="'Детали'" color="warn"/>
       </div>
@@ -30,7 +30,7 @@ defineProps({
   overflow: hidden;
   background-color: rgba(0, 255, 247, 0.04);
   cursor: pointer;
-  box-shadow: var(--box-shadow);
+  border: 2px solid #cecece;
 
   &-title {
     display: -webkit-box;
