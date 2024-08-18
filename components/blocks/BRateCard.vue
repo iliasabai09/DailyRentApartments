@@ -25,11 +25,12 @@ defineProps({
 
 <style scoped lang="scss">
 .card {
-  box-shadow: var(--box-shadow);
   width: 100%;
   border-radius: 16px;
   overflow: hidden;
   background-color: rgba(0, 255, 247, 0.04);
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
 
   &-title {
     display: -webkit-box;

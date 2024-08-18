@@ -13,7 +13,7 @@
 .index {
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 86px;
   margin: 16px 0;
 }
 </style>

@@ -18,6 +18,15 @@
 	border-radius: 8px;
 }
 
+.UHoverShadow {
+	transition: .3s ease;
+
+	&:hover {
+		transition: .3s ease;
+		box-shadow: var(--box-shadow);
+	}
+}
+
 .UDesktop {
 	@media (max-width: 768px) {
 		display: none;
