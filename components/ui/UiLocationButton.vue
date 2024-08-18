@@ -1,12 +1,14 @@
 <template>
-  <button>
+  <button @click="emits('openLocationModal')">
     <img src="public/gifs/geolocation.gif" width="50" alt="loader"/>
     <span class="TTextMedium">Алматы</span>
   </button>
 </template>
 
 <script setup lang="ts">
+import { defineEmits } from 'vue'
 
+const emits = defineEmits(['openLocationModal'])
 </script>
 
 <style scoped lang="scss">

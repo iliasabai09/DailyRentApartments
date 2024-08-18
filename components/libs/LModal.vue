@@ -4,12 +4,15 @@
       width="auto"
   >
     <slot></slot>
-    <div style="background-color: #fff">Ilias</div>
   </v-dialog>
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, ref } from 'vue'
+import { defineEmits, defineProps, ref, watch } from 'vue'
+
+function test() {
+  alert(1)
+}
 
 const dialog = ref(false)
 const props = defineProps({
@@ -20,9 +23,16 @@ const props = defineProps({
   }
 })
 
-onMounted(() => {
-  dialog.value = props.dialogOpened
-})
+watch(
+    () => props.dialogOpened,
+    () => dialog.value = props.dialogOpened
+)
+watch(
+    () => dialog.value,
+    () => !dialog.value && emits('close')
+)
+
+const emits = defineEmits(['close'])
 </script>
 
 <style scoped>

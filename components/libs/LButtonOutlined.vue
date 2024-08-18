@@ -1,7 +1,7 @@
 <template>
 <button
-    :class="[color + 'Btn']"
-    class="TMiddleMedium"
+    :class="[color + 'Btn', border + 'Border']"
+    class="TMiddleLarge"
     :disabled="disabled"
 >
   {{ title }}
@@ -25,6 +25,11 @@ defineProps({
     type: Boolean,
     required: false,
     default: false
+  },
+  border: {
+    type: String as PropType<'large' | 'small'>,
+    required: false,
+    default: 'small'
   }
 })
 </script>
@@ -85,5 +90,13 @@ button {
     transition: .3s ease;
     background-color: var(--warn-light);
   }
+}
+
+.largeBorder {
+  border-radius: 16px;
+}
+
+.smallBorder {
+  border-radius: 8px;
 }
 </style>

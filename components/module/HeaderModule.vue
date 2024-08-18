@@ -4,7 +4,7 @@
       <div class="header">
         <UiLogo/>
         <div class="specs UDesktop">
-          <LazyUiLocationButton/>
+          <UiLocationButton @openLocationModal="locationModal = true"/>
           <div class="USpacer"></div>
           <UiCreateCoworkingButton/>
           <UILanguageButton :currentLocale="currentLocale" @selectLanguage="selectLanguage($event)"/>
@@ -17,6 +17,11 @@
       </div>
     </div>
   </header>
+
+  <!-- MODALS -->
+  <LModal :dialog-opened="locationModal" @close="locationModal = false">
+    <ModalLocations/>
+  </LModal>
 </template>
 
 <script setup lang="ts">
@@ -27,9 +32,14 @@ import { useCityUseCase } from '../../domain/useCases/LanguageUserCase'
 import { ref } from 'vue'
 
 const currentLocale = ref(useCityUseCase.getLanguageLocale())
+const locationModal = ref(false)
 
 const selectLanguage = (lng: string) => {
   useCityUseCase.selectLanguage(lng)
+}
+
+const openLocationModal = function () {
+
 }
 </script>
 
