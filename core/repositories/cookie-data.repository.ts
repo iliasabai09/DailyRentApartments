@@ -11,4 +11,8 @@ export class CookieDataRepository {
 	getValue(key: CookieEnum) {
 		return this.cookie(key).value
 	}
+
+	setValue(key: CookieEnum, value: string) {
+		this.cookie(key).value = value
+	}
 }

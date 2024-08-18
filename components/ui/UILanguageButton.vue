@@ -1,12 +1,42 @@
 <template>
-  <button>
+  <button id="language-button">
     <LIcon :icon="'translate'" color="var(--primary)" scale="25"/>
-    <span class="TMiddleMedium">Русский</span>
+    <span class="TMiddleMedium">{{ currentLanguage.title }}</span>
   </button>
+  <LMenu :list="languages" :activator="'#language-button'" @select="selectLanguage($event)"/>
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from 'vue'
 
+const props = defineProps({
+  currentLocale: {
+    type: String,
+    default: 'ru',
+    required: false
+  }
+})
+
+const currentLocale = ref(props.currentLocale)
+const languages = ref([
+  {
+    title: 'Русский',
+    value: 'ru'
+  },
+  {
+    title: 'Казахский',
+    value: 'kz'
+  }
+])
+
+function selectLanguage(locale) {
+  currentLocale.value = locale
+  emits('selectLanguage', locale)
+}
+
+const currentLanguage = computed(() => languages.value.find(lng => lng.value === currentLocale.value))
+
+const emits = defineEmits(['selectLanguage'])
 </script>
 
 <style scoped lang="scss">

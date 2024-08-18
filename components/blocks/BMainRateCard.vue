@@ -30,7 +30,7 @@ defineProps({
   overflow: hidden;
   background-color: rgba(0, 255, 247, 0.04);
   cursor: pointer;
-  border: 2px solid #cecece;
+  border: 1px solid #cecece;
 
   &-title {
     display: -webkit-box;

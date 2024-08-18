@@ -7,7 +7,7 @@
           <LazyUiLocationButton/>
           <div class="USpacer"></div>
           <UiCreateCoworkingButton/>
-          <UILanguageButton/>
+          <UILanguageButton :currentLocale="currentLocale" @selectLanguage="selectLanguage($event)"/>
           <UiLoginButton/>
         </div>
         <div class="USpacer"></div>
@@ -22,7 +22,16 @@
 <script setup lang="ts">
 import UILanguageButton from '../ui/UILanguageButton.vue'
 import UiCreateCoworkingButton from '../ui/UiCreateCoworkingButton.vue'
-import UiIconButton from '../ui/UiIconButton.vue'</script>
+import UiIconButton from '../ui/UiIconButton.vue'
+import { useCityUseCase } from '../../domain/useCases/LanguageUserCase'
+import { ref } from 'vue'
+
+const currentLocale = ref(useCityUseCase.getLanguageLocale())
+
+const selectLanguage = (lng: string) => {
+  useCityUseCase.selectLanguage(lng)
+}
+</script>
 
 <style scoped lang="scss">
 header {

@@ -131,6 +131,7 @@ footer {
     font-size: 15px;
     cursor: pointer;
     transition: .3s ease;
+    width: fit-content;
 
     &:hover {
       transition: .3s ease;
