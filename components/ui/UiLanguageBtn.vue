@@ -1,8 +1,9 @@
 <template>
-<div class="languageBtn">
-  <div>RU</div>
-  <LIcon icon="arrowBottom" color="var(--primary)" scale="14"/>
-</div>
+  <button class="languageBtn" id="languageBtn">
+    <span>RU</span>
+    <LIcon icon="arrowBottom" color="var(--primary)" scale="14"/>
+  </button>
+  <LMenu :list="[{title: 'Русский', value: 'ru'},{title: 'Казакша', value: 'kz'}]" :activator="'#languageBtn'"/>
 </template>
 
 <script setup>

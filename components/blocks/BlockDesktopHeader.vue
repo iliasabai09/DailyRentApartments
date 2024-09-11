@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, PropType } from 'vue'
+import { defineProps, type PropType } from 'vue'
 
 defineProps({
   links: {
