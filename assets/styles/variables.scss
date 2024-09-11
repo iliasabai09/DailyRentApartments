@@ -1,25 +1,14 @@
 :root {
 	// colors
-	--primary: #001790;
-	--primary-light: rgba(0, 23, 144, 0.1);
-
-	--secondary: #1cbcb7;
-	--secondary-light: rgba(28, 188, 183, 0.1);
-
-	--error: #d10404;
-	--error-light: #d10404;
-
-	--warn: #e99f00;
-	--warn-light: rgba(236, 168, 37, 0.1);
-
-	--gray: #aeaeae;
+	--primary: #FFB85D;
+	--light: #F1F1F1;
+	--red: #FF5412;
 
 	// borers
 	--border-large: 16px;
 	--border-small: 8px;
 
 	// main hover
-	--hover-btn: #efefef;
 
 	--box-shadow: 0px 0px 4px 0px rgba(66, 68, 90, 1);
 }

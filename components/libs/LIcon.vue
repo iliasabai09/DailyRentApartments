@@ -37,6 +37,9 @@ const icons = {
   account_circle: defineAsyncComponent(() => import('../svgs/icons/IconAccountCircle.vue')),
   translate: defineAsyncComponent(() => import('../svgs/icons/IconTranslate.vue')),
   add: defineAsyncComponent(() => import('../svgs/icons/IconAdd.vue')),
+  geo: defineAsyncComponent(() => import('../svgs/icons/IconGeo.vue')),
+  arrowBottom: defineAsyncComponent(() => import('../svgs/icons/IconArrowBottom.vue')),
+  logout: defineAsyncComponent(() => import('../svgs/icons/IconLogout.vue'))
 }
 
 </script>

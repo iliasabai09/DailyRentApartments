@@ -1,35 +1,30 @@
 <template>
   <div class="modal">
-    <div class="modal-header TTextLarge">Выберите город</div>
-    <div class="modal-section">
-      <div
-          v-ripple
-          :class="{ selectedItem: city.cityCode === selectedCity }"
-          class="modal-city"
-          v-for="city in locations"
-          @click="selectedCity = city.cityCode"
-      >
-        <div class="TMiddleMedium">{{ city.title }}</div>
-        <div>
-          <v-radio
-              :value="city.cityCode"
-              v-model="selectedCity"
-              color="var(--primary)"
-          ></v-radio>
+    <template v-if="step === 1">
+      <div class="step1">
+        <div class="TTitleLarge">Ваш город <span class="textRed">{{ city }}</span>?</div>
+        <div class="UPointer UUnderline UPointer TText" @click="step = 2">Выбрать другой город</div>
+      </div>
+    </template>
+    <template v-if="step === 2">
+      <div class="step2">
+        <div class="step2-header">
+          <div>X</div>
+        </div>
+        <div class="step2-locations">
+          <div class="step2-location TTitleLarge" v-for="location in locations">{{ location.title }}</div>
         </div>
       </div>
-    </div>
-    <div class="modal-footer">
-      <LButtonOutlined :title="'Отмена'" :border="'large'" color="warn"/>
-      <LButtonFilled :title="'Сохранить'" :border="'large'"/>
-    </div>
+    </template>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useCityUseCase } from '../../domain/useCases/City.useCase'
 
-const selectedCity = ref(6)
+const step = ref(1)
+const city = ref(useCityUseCase.getCityName())
 
 const locations = ref([
   {
@@ -137,49 +132,34 @@ const locations = ref([
 
 <style scoped lang="scss">
 .modal {
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
-  width: 400px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
+}
 
-  .selectedItem {
-    background-color: var(--primary-light);
-  }
+.step1 {
+  width: 460px;
+  height: 172px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.step2 {
+  display: flex;
 
   &-header {
-    height: 60px;
-    padding: 0 16px;
-    display: flex;
-    align-items: center;
+
   }
 
-  &-section {
-    flex: 1;
-    overflow-y: scroll;
+  &-locations {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  &-city {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 45px;
-    padding: 0 16px;
-    width: 100%;
-    cursor: pointer;
-  }
-
-  &-footer {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    padding: 0 16px;
-    gap: 16px;
-
-    button {
-      width: 100%;
-    }
+  &-location {
+    width: 33.3333333%;
   }
 }
 </style>

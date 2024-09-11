@@ -1,1 +1,1 @@
-export type IconTypes = 'menu' | 'close' | 'account_circle' | 'translate' | 'add';
+export type IconTypes = 'menu' | 'close' | 'account_circle' | 'translate' | 'add' | 'geo' | 'arrowBottom' | 'logout';

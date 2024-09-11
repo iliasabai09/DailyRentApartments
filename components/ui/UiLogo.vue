@@ -1,6 +1,7 @@
 <template>
-  <NuxtLink class="UPointer logo" to="/">
-    <img src="https://www.kovorkingi.ru/static/images/logo.svg" height="40" alt="Logotype">
+  <NuxtLink class="UPointer textWhite logo" to="/">
+    <h1 class="fwBold">Booking-office</h1>
+    <div class="TSmall">Все коворкинги Казахстана</div>
   </NuxtLink>
 </template>
 
@@ -8,13 +9,13 @@
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
+h1 {
+  line-height: 36px;
+}
+
 .logo {
-  img {
-    height: 40px;
-    @media (max-width: 768px) {
-      height: 28px;
-    }
-  }
+  display: flex;
+  flex-direction: column;
 }
 </style>

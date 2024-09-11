@@ -4,10 +4,13 @@
     <div id="progressbar">
       <LProgressbar/>
     </div>
-    <BMainNavigation class="UDesktop"/>
     <NuxtPage/>
     <FooterModule/>
   </div>
+  <!-- Modals -->
+  <LModal :dialog-opened="false">
+    <ModalLocations/>
+  </LModal>
 </template>
 
 <script setup lang="ts">
