@@ -1,19 +1,12 @@
 <template>
   <div class="index">
+    <SearchKoworkingModule/>
   </div>
 </template>
 
 <script setup lang="ts">
-</script>
+import SearchKoworkingModule from '../modules/SearchKoworking/SearchKoworkingModule.vue'</script>
 
 <style scoped lang="scss">
-.index {
-  display: flex;
-  flex-direction: column;
-  gap: 86px;
-  margin: 16px 0;
-  @media (max-width: 768px) {
-    gap: 48px;
-  }
-}
+
 </style>

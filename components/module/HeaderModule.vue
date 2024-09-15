@@ -1,5 +1,5 @@
 <template>
-  <BlockDesktopHeader :links="links"/>
+  <HeaderDesktop :links="links"/>
   <!-- MODALS -->
   <LModal :dialog-opened="locationsModalOpened" @close="locationsModalOpened = false">
     <ModalLocations/>
@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useCityUseCase } from '../../domain/useCases/City.useCase'
-import BlockDesktopHeader from '../blocks/BlockDesktopHeader.vue'
+import HeaderDesktop from '../../modules/HeaderModule/view/HeaderDesktop.vue'
 
 const locationsModalOpened = ref(false)
 

@@ -16,6 +16,11 @@
 
 <script setup lang="ts">
 import { defineProps, type PropType } from 'vue'
+import UiLogo from '../components/ui/UiLogo.vue'
+import UiNavLink from '../components/ui/UiNavLink.vue'
+import UiLocationBtn from '../components/ui/UiLocationBtn.vue'
+import UiLanguageBtn from '../components/ui/UiLanguageBtn.vue'
+import UiLogoutBtn from '../components/ui/UiLogoutBtn.vue'
 
 defineProps({
   links: {
