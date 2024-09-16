@@ -19,7 +19,7 @@
             variant="solo"
             multiple
         ></v-select>
-        <LButton :title="'НАЙТИ'"/>
+        <LButton :title="'НАЙТИ'" иа/>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
   .filters {
     background-color: #F1F1F1;
     border-radius: 16px;
-    padding: 16px;
+    padding: 32px 64px;
 
     &-title {
       margin-bottom: 16px;
@@ -57,7 +57,7 @@
 
     &-selects {
       display: flex;
-      gap: 16px;
+      gap: 32px;
     }
   }
 }

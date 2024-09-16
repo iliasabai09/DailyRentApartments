@@ -8,5 +8,7 @@
 import SearchKoworkingModule from '../modules/SearchKoworking/SearchKoworkingModule.vue'</script>
 
 <style scoped lang="scss">
-
+.index {
+  width: 80vw;
+}
 </style>

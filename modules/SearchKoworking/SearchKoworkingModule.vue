@@ -13,7 +13,7 @@
         <img class="slide" :src="slide" alt="slide">
       </v-carousel-item>
     </v-carousel>
-    <div class="filters">
+    <div class="filters container">
       <KoworkingFilters/>
     </div>
   </div>
@@ -36,7 +36,6 @@ const slides = ref(['/images/banner.jpg', '/images/banner.jpg'])
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 900px;
   width: 100%;
 }
 
