@@ -1,10 +1,9 @@
 <template>
-  <!-- SearchOfficesModule -->
-  <h1>Here is offices page...</h1>
+  <OfficesModule/>
 </template>
 
 <script setup lang="ts">
-</script>
+import OfficesModule from '../../modules/OfficesModule/OfficesModule.vue'</script>
 
 <style scoped>
 
