@@ -20,7 +20,21 @@
 
 <script setup lang="ts">
 import { FilterFields } from '../../shared/constants/enums'
-import KoworkingFilters from '../../components/blocks/KoworkingFilters.vue'</script>
+import KoworkingFilters from '../../components/blocks/KoworkingFilters.vue'
+import { useRoute } from 'nuxt/app'
+import { watch } from 'vue'
+
+const route = useRoute()
+
+// Тут будет логика на получение параметров для запроса через query параметры
+watch(
+    () => route.query,
+    () => {
+      console.log(route.query)
+    }
+)
+
+</script>
 
 <style scoped>
 
