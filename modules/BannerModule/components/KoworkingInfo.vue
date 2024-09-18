@@ -21,7 +21,7 @@ const emits = defineEmits(['animateEnter', 'animateLeave'])
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   position: fixed;
   bottom: 32px;
   right: 32px;
