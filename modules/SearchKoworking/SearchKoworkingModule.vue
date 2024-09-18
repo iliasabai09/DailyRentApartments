@@ -15,11 +15,12 @@ import KoworkingFilters from './components/KoworkingFilters.vue'</script>
 }
 
 .filters {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  z-index: 1;
 }
 
 </style>

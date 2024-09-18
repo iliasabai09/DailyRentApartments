@@ -9,6 +9,5 @@ import SearchKoworkingModule from '../modules/SearchKoworking/SearchKoworkingMod
 
 <style scoped lang="scss">
 .index {
-  width: 80vw;
 }
 </style>
