@@ -19,10 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import HeaderModule from '../components/module/HeaderModule.vue'
 import FooterModule from '../components/module/FooterModule.vue'
 import BannerModule from '../modules/BannerModule/BannerModule.vue'
 import { ref } from 'vue'
+import HeaderModule from '../modules/HeaderModule/HeaderModule.vue'
 
 const animate = ref(false)
 

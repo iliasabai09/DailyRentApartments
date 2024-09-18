@@ -1,11 +1,12 @@
 <template>
-  <NuxtLink class="navLink" :to="link">{{ title }}</NuxtLink>
+  <NuxtLink class="navLink" :class="{active:isActiveLink}" :to="link">{{ title }}</NuxtLink>
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { computed, defineProps } from 'vue'
+import { useRoute } from 'nuxt/app'
 
-defineProps({
+const props = defineProps({
   link: {
     type: String,
     required: true
@@ -15,6 +16,11 @@ defineProps({
     required: true
   }
 })
+
+const route = useRoute()
+
+const isActiveLink = computed(() => route.fullPath.includes(props.link))
+
 </script>
 
 <style scoped>
@@ -22,5 +28,9 @@ defineProps({
   font-size: 16px;
   color: var(--primary);
   font-weight: 500;
+}
+
+.active {
+  color: #fff;
 }
 </style>
