@@ -4,7 +4,12 @@
     <div id="progressbar">
       <LProgressbar/>
     </div>
-    <NuxtPage/>
+    <div class="page" :class="{ pageAnimate: animate }">
+      <NuxtPage/>
+    </div>
+    <div class="banner">
+      <BannerModule @animateBanner="animate = $event"/>
+    </div>
     <FooterModule/>
   </div>
   <!-- Modals -->
@@ -15,11 +20,34 @@
 
 <script setup lang="ts">
 import HeaderModule from '../components/module/HeaderModule.vue'
-import FooterModule from '../components/module/FooterModule.vue'</script>
+import FooterModule from '../components/module/FooterModule.vue'
+import BannerModule from '../modules/BannerModule/BannerModule.vue'
+import { ref } from 'vue'
+
+const animate = ref(false)
+
+</script>
 
 <style scoped>
 .nuxt {
   min-height: 100vh;
+}
+
+.page {
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+  margin-top: 85px;
+  transition: .3s ease;
+}
+
+.pageAnimate {
+  opacity: .3;
+  transition: .3s ease;
+}
+
+.banner {
+
 }
 
 #progressbar {
