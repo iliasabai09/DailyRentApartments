@@ -14,6 +14,6 @@ const links = [
 
 </script>
 
-<style scoped>
+<style scoped >
 
 </style>

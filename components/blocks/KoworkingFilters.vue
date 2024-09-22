@@ -1,13 +1,10 @@
 <template>
   <div class="content">
-    <div class="content-heading">
-      <h1>BOOKING-OFFICE</h1>
-      <!--      <div>Все коворкинги Казахстана</div>-->
-    </div>
     <div class="filters">
-      <div class="filters-title TTitleMedium">{{ title }}</div>
+      <div class="filters-title THeadLarge">{{ title }}</div>
       <div class="filters-selects">
         <v-select
+            class="filters-select"
             v-for="select in fields"
             v-model="model[select.field]"
             :label="select.label"
@@ -33,19 +30,20 @@ defineProps({
   fields: {
     type: Object as PropType<{ field: string, options: string[], label: string }[]>
   },
-  animate: {
+  hasResult: {
     type: Boolean,
     required: false,
     default: false
   }
 })
 
+const router = useRouter()
+
 const model = ref({
   region: null,
   comforts: null
 })
 
-const router = useRouter()
 
 function navigateParams() {
   router.push({
@@ -53,28 +51,22 @@ function navigateParams() {
       ...model.value
     }
   })
+  emits('getCoworkings')
 }
 
+const emits = defineEmits(['getCoworkings'])
 
 </script>
 
 <style scoped lang="scss">
+.hasResultHeading {
+  max-height: 0 !important;
+  transition: .3s ease;
+  overflow-y: hidden !important;
+}
+
 .content {
   width: 100%;
-
-  &-heading {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 32px;
-
-    h1 {
-      font-size: 70px;
-      line-height: 60px;
-    }
-  }
 
   .filters {
     background-color: #F1F1F1;
@@ -88,6 +80,10 @@ function navigateParams() {
     &-selects {
       display: flex;
       gap: 32px;
+    }
+
+    &-select {
+      flex: 1;
     }
   }
 }

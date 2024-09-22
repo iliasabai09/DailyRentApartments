@@ -1,41 +1,76 @@
 <template>
-  <div class="offices container">
+  <div class="offices container" :class="{'offices-animate': coworkings}">
+    <h1>BOOKING-OFFICE</h1>
     <KoworkingFilters
-        :title="'Поиск оффиса'"
-        :fields="[
-            {
-              label: 'Все районы',
-              options: ['Алматинский район', 'Байконурский район','Есильский район','Нуринский район'],
-              field: FilterFields.REGION
-            },
-            {
-              label: 'Удобства',
-              options: ['Интернет (проводной)', 'Принтер','Парковка','Намазхана'],
-              field: FilterFields.COMFORTS
-            },
-        ]"
+        :title="'ПОИСК ОФФИСА'"
+        :fields="filterFields"
+        :has-result="!!coworkings"
+        @getCoworkings="getCoworkings"
     />
+    <div class="offices-result" :class="{'offices-result_animate': coworkings}">
+      <KoworkingResultList :coworkings="coworkings"/>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { FilterFields } from '../../shared/constants/enums'
 import KoworkingFilters from '../../components/blocks/KoworkingFilters.vue'
-import { useRoute } from 'nuxt/app'
-import { watch } from 'vue'
+import { useOffices } from './composables'
 
-const route = useRoute()
-
-// Тут будет логика на получение параметров для запроса через query параметры
-watch(
-    () => route.query,
-    () => {
-      console.log(route.query)
-    }
-)
+const {
+  coworkings,
+  filterFields,
+  getCoworkings
+} = useOffices()
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+h1 {
+  font-size: 70px;
+  line-height: 60px;
+  color: #fff;
+  margin-bottom: 32px;
+  text-align: center;
+}
 
+.offices {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .6s ease;
+  z-index: 1;
+  position: fixed;
+
+  &-animate {
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: .6s ease;
+    z-index: 1;
+    position: fixed;
+  }
+}
+
+.offices-result {
+  opacity: 0;
+
+  &_animate {
+    opacity: 1;
+    animation-delay: 4.8s;
+    animation: move .3s ease;
+  }
+}
+
+@keyframes result {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 </style>
