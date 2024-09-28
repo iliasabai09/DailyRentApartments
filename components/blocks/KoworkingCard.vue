@@ -1,5 +1,10 @@
 <template>
-  <div class="koworking">
+  <div
+      :class="{
+        vipCard: false,
+      }"
+      class="koworking"
+  >
     <img :src="koworking.img" alt="koworking" width="300">
     <div class="detail">
       <div class="detail-title TSubHeadMedium">{{ koworking.title }}</div>
@@ -29,6 +34,11 @@ defineProps({
 </script>
 
 <style scoped lang="scss">
+.vipCard {
+  border: 2px solid var(--primary);
+  background-color: #FFF7EC;
+}
+
 .koworking {
   border-radius: 16px;
   padding: 16px;
