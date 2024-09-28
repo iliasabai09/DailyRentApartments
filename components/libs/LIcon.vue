@@ -4,7 +4,7 @@
         :style="{
           width:scale + 'px',
           height: scale + 'px',
-          fill :color
+          fill: 'red'
         }"
     />
 </template>
@@ -42,17 +42,12 @@ const icons = {
   logout: defineAsyncComponent(() => import('../svgs/icons/IconLogout.vue')),
   whatsapp: defineAsyncComponent(() => import('../svgs/icons/IconWhatsapp.vue')),
   telegram: defineAsyncComponent(() => import('../svgs/icons/IconTelegram.vue')),
-  instagram: defineAsyncComponent(() => import('../svgs/icons/IconInstagram.vue'))
+  instagram: defineAsyncComponent(() => import('../svgs/icons/IconInstagram.vue')),
+  star: defineAsyncComponent(() => import('../svgs/icons/IconStar.vue'))
 }
 
 </script>
 
 <style scoped>
-* {
-  fill: red;
-}
 
-svg path {
-  fill: red;
-}
 </style>

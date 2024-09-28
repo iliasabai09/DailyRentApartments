@@ -10,4 +10,5 @@ export type IconTypes =
 	| 'whatsapp'
 	| 'telegram'
 	| 'instagram'
+	| 'star'
 

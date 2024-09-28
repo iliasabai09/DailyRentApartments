@@ -19,6 +19,9 @@
     <div class="line"></div>
     <div class="result">
       <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
+      <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
+      <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
+      <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
     </div>
   </div>
 </template>
@@ -70,9 +73,10 @@ defineProps({
     align-items: center;
     justify-content: space-between;
   }
-  .result{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  .result {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   }
 }
 </style>
