@@ -44,6 +44,7 @@ h1 {
   transition: .6s ease;
   z-index: 1;
   position: fixed;
+  height: 100%;
 
   &-animate {
     top: -10px;
@@ -57,6 +58,7 @@ h1 {
 
 .offices-result {
   opacity: 0;
+  flex: 1;
 
   &_animate {
     opacity: 1;

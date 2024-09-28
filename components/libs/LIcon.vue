@@ -39,7 +39,10 @@ const icons = {
   add: defineAsyncComponent(() => import('../svgs/icons/IconAdd.vue')),
   geo: defineAsyncComponent(() => import('../svgs/icons/IconGeo.vue')),
   arrowBottom: defineAsyncComponent(() => import('../svgs/icons/IconArrowBottom.vue')),
-  logout: defineAsyncComponent(() => import('../svgs/icons/IconLogout.vue'))
+  logout: defineAsyncComponent(() => import('../svgs/icons/IconLogout.vue')),
+  whatsapp: defineAsyncComponent(() => import('../svgs/icons/IconWhatsapp.vue')),
+  telegram: defineAsyncComponent(() => import('../svgs/icons/IconTelegram.vue')),
+  instagram: defineAsyncComponent(() => import('../svgs/icons/IconInstagram.vue'))
 }
 
 </script>
