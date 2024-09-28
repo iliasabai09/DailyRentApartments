@@ -17,7 +17,9 @@
       </div>
     </div>
     <div class="line"></div>
-    <pre>{{ coworkings }}</pre>
+    <div class="result">
+      <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
+    </div>
   </div>
 </template>
 
@@ -67,6 +69,10 @@ defineProps({
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .result{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 </style>

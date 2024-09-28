@@ -21,10 +21,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useCityUseCase } from '../../domain/useCases/City.useCase'
 
 const step = ref(1)
-const city = ref(useCityUseCase.getCityName())
 
 const locations = ref([
   {
