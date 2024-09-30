@@ -1,5 +1,6 @@
 <template>
-  <div
+  <NuxtLink
+      :to="`/offices/${koworking.id}`"
       :class="{
         vipCard: false,
       }"
@@ -13,18 +14,19 @@
       </div>
       <div class="detail-review">26 отзывов</div>
       <div class="detail-type TTitleMedium">Офис</div>
-      <div class="detail-price"><span class="TTitleMedium">от 155 000 т </span>/ месяц</div>
+      <UiPrice/>
       <div class="detail-description TSmall">{{ koworking.description }}</div>
       <div class="detail-location">
         <LIcon icon="geo" :color="'#fff'"/>
         <span class="TSmall">пр. Тауелсиздик 15/2, 3 этаж.</span>
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
 import { defineProps, type PropType } from 'vue'
+import UiPrice from '../ui/UiPrice.vue'
 
 defineProps({
   koworking: {
@@ -44,31 +46,23 @@ defineProps({
   padding: 16px;
   display: flex;
   gap: 16px;
+  color: #000;
 
   .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
     &-title {
-      margin-bottom: 8px;
     }
 
     &-rating {
-      margin-bottom: 12px;
     }
 
     &-review {
       color: #7D7979;
       text-decoration: underline;
       cursor: pointer;
-      margin-bottom: 8px;
-    }
-
-    &-price {
-      margin-bottom: 8px;
-
-      span {
-        background-color: var(--primary);
-        margin-right: 8px;
-        padding: 0 4px;
-      }
     }
 
     &-description {
@@ -78,7 +72,6 @@ defineProps({
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: normal;
-      margin-bottom: 4px;
     }
 
     &-location {
