@@ -4,7 +4,8 @@
         :style="{
           width:scale + 'px',
           height: scale + 'px',
-          fill: 'red'
+          fill: color,
+          stroke
         }"
     />
 </template>
@@ -27,7 +28,12 @@ defineProps({
   color: {
     type: String,
     required: false,
-    default: '#000'
+    default: ''
+  },
+  stroke: {
+    type: String,
+    required: false,
+    default: ''
   }
 })
 
@@ -43,7 +49,15 @@ const icons = {
   whatsapp: defineAsyncComponent(() => import('../svgs/icons/IconWhatsapp.vue')),
   telegram: defineAsyncComponent(() => import('../svgs/icons/IconTelegram.vue')),
   instagram: defineAsyncComponent(() => import('../svgs/icons/IconInstagram.vue')),
-  star: defineAsyncComponent(() => import('../svgs/icons/IconStar.vue'))
+  star: defineAsyncComponent(() => import('../svgs/icons/IconStar.vue')),
+  wifi: defineAsyncComponent(() => import('../svgs/icons/IconWifi.vue')),
+  coffee: defineAsyncComponent(() => import('../svgs/icons/IconCoffee.vue')),
+  parking: defineAsyncComponent(() => import('../svgs/icons/IconParking.vue')),
+  printer: defineAsyncComponent(() => import('../svgs/icons/IconPrinter.vue')),
+  namaz: defineAsyncComponent(() => import('../svgs/icons/IconNamaz.vue')),
+  fruits: defineAsyncComponent(() => import('../svgs/icons/IconFruits.vue')),
+  clouds: defineAsyncComponent(() => import('../svgs/icons/IconClouds.vue')),
+  sun: defineAsyncComponent(() => import('../svgs/icons/IconSun.vue')),
 }
 
 </script>

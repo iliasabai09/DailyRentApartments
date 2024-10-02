@@ -2,12 +2,14 @@
   <div class="container">
     <div class="detail">
       <h1 class="THeadMedium detail-title">Коворкинг центр Токио</h1>
+      <div class="line"></div>
+      <KoworkingDetail/>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-</script>
+import KoworkingDetail from './components/KoworkingDetail.vue'</script>
 
 <style scoped lang="scss">
 .detail {
@@ -18,10 +20,15 @@
   margin-top: 106px;
 
   &-title {
-    height: 80px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #D9D9D9;
   }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #D9D9D9;
+  margin: 16px 0;
 }
 </style>

@@ -11,4 +11,12 @@ export type IconTypes =
 	| 'telegram'
 	| 'instagram'
 	| 'star'
+	| 'wifi'
+	| 'coffee'
+	| 'parking'
+	| 'printer'
+	| 'namaz'
+	| 'fruits'
+	| 'clouds'
+	| 'sun'
 

@@ -13,13 +13,11 @@
         <UiRatingStar :rating="3"/>
       </div>
       <div class="detail-review">26 отзывов</div>
+      <UiReviewsItem/>
       <div class="detail-type TTitleMedium">Офис</div>
       <UiPrice/>
       <div class="detail-description TSmall">{{ koworking.description }}</div>
-      <div class="detail-location">
-        <LIcon icon="geo" :color="'#fff'"/>
-        <span class="TSmall">пр. Тауелсиздик 15/2, 3 этаж.</span>
-      </div>
+      <UiLocationItem/>
     </div>
   </NuxtLink>
 </template>
@@ -27,6 +25,8 @@
 <script setup lang="ts">
 import { defineProps, type PropType } from 'vue'
 import UiPrice from '../ui/UiPrice.vue'
+import UiLocationItem from '../ui/UiLocationItem.vue'
+import UiReviewsItem from '../ui/UiReviewsItem.vue'
 
 defineProps({
   koworking: {
@@ -59,12 +59,6 @@ defineProps({
     &-rating {
     }
 
-    &-review {
-      color: #7D7979;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-
     &-description {
       display: -webkit-box;
       -webkit-line-clamp: 2;
@@ -72,13 +66,6 @@ defineProps({
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: normal;
-    }
-
-    &-location {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      color: #7D7979;
     }
   }
 }
