@@ -4,12 +4,20 @@
       <h1 class="THeadMedium detail-title">Коворкинг центр Токио</h1>
       <div class="line"></div>
       <KoworkingDetail/>
+      <div class="line"></div>
+      <div class="detail-tabs">
+        <KoworkingPlaceTab type="workSpace" :active="true"/>
+        <KoworkingPlaceTab type="conference"/>
+        <KoworkingPlaceTab type="office"/>
+        <KoworkingPlaceTab type="negotiation"/>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import KoworkingDetail from './components/KoworkingDetail.vue'</script>
+import KoworkingDetail from './components/KoworkingDetail.vue'
+import KoworkingPlaceTab from './components/KoworkingPlaceTab.vue'</script>
 
 <style scoped lang="scss">
 .detail {
@@ -22,6 +30,15 @@ import KoworkingDetail from './components/KoworkingDetail.vue'</script>
   &-title {
     display: flex;
     align-items: center;
+  }
+
+  &-tabs {
+    display: flex;
+    gap: 4px;
+
+    div {
+      flex: 1;
+    }
   }
 }
 

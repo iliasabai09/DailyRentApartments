@@ -1,6 +1,6 @@
 <template>
   <div class="location">
-    <LIcon icon="geo" :color="'#fff'"/>
+    <LIcon icon="geo" :color="'var(--primary)'"/>
     <span class="TSmall">пр. Тауелсиздик 15/2, 3 этаж.</span>
   </div>
 </template>
