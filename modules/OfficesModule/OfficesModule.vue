@@ -1,6 +1,6 @@
 <template>
   <div class="offices container" :class="{'offices-animate': coworkings}">
-    <h1>BOOKING-OFFICE</h1>
+    <h1 class="offices-heading" :class="{'animate-heading': coworkings}">BOOKING-OFFICE</h1>
     <KoworkingFilters
         :title="'ПОИСК ОФФИСА'"
         :fields="filterFields"
@@ -27,38 +27,33 @@ const {
 
 <style scoped lang="scss">
 h1 {
-  font-size: 70px;
-  line-height: 60px;
-  color: #fff;
-  margin-bottom: 32px;
-  text-align: center;
+
 }
 
 .offices {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: .6s ease;
-  z-index: 1;
-  position: fixed;
-  height: 100%;
-
-  &-animate {
-    top: -10px;
-    left: 50%;
-    transform: translate(-50%, 0);
+  &-heading {
     transition: .6s ease;
-    z-index: 1;
-    position: fixed;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .animate-heading {
+    transition: .6s ease;
+    height: 0;
+    margin-bottom: 16px;
   }
 }
 
 .offices-result {
   opacity: 0;
   flex: 1;
+  margin-top: 16px;
 
   &_animate {
     opacity: 1;

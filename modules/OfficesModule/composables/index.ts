@@ -25,7 +25,6 @@ export function useOffices() {
 		OfficesService.getOffices(params)
 			.then(res => {
 				coworkings.value = coworkings.value ? null : res
-				console.log(params)
 			})
 	}
 
