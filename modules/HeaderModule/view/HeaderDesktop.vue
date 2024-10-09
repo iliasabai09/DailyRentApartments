@@ -6,7 +6,7 @@
         <div class="header-links">
           <UiNavLink v-for="link in links" :title="link.title" :link="link.link"/>
         </div>
-        <UiLocationBtn/>
+        <UiLocationBtn @click="emits('openModal')"/>
         <UiLanguageBtn/>
         <UiLogoutBtn/>
       </div>
@@ -27,6 +27,8 @@ defineProps({
     type: Object as PropType<{ title: string, link: string }[]>
   }
 })
+
+const emits = defineEmits(['openModal'])
 </script>
 
 <style scoped lang="scss">

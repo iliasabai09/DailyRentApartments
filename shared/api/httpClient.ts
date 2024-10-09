@@ -1,4 +1,5 @@
 import { useFetch } from 'nuxt/app'
+import { IHttpClient } from '../types/interfaces/HttpClient'
 
 
 abstract class HttpClientAbstract {
@@ -14,7 +15,7 @@ abstract class HttpClientAbstract {
 
 	abstract put<T>(url: string, body: T): any;
 
-	abstract delete(url: string, id: string | number): any;
+	abstract delete<T>(url: string, id: string | number): IHttpClient<T>;
 }
 
 export class HttpClient extends HttpClientAbstract {
@@ -67,9 +68,9 @@ export class HttpClient extends HttpClientAbstract {
 		})
 	}
 
-	delete(url: string, id: string | number): unknown {
+	delete<T>(url: string, id: string | number): IHttpClient<T> {
 		return useFetch(this.BASE_URL + url + '/' + id, {
 			method: 'delete'
-		})
+		}) as any
 	}
 }

@@ -10,10 +10,6 @@
 <script setup lang="ts">
 import { defineEmits, defineProps, ref, watch } from 'vue'
 
-function test() {
-  alert(1)
-}
-
 const dialog = ref(false)
 const props = defineProps({
   dialogOpened: {

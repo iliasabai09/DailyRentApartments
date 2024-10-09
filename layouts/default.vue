@@ -10,7 +10,6 @@
     <div class="banner">
       <BannerModule @animateBanner="animate = $event"/>
     </div>
-<!--    <FooterModule/>-->
   </div>
   <!-- Modals -->
   <LModal :dialog-opened="false">
@@ -19,7 +18,6 @@
 </template>
 
 <script setup lang="ts">
-// import FooterModule from '../components/module/FooterModule.vue'
 import BannerModule from '../modules/BannerModule/BannerModule.vue'
 import { ref } from 'vue'
 import HeaderModule from '../modules/HeaderModule/HeaderModule.vue'
