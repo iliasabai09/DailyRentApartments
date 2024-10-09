@@ -2,13 +2,13 @@
   <div class="offices container" :class="{'offices-animate': coworkings}">
     <h1 class="offices-heading" :class="{'animate-heading': coworkings}">BOOKING-OFFICE</h1>
     <KoworkingFilters
-        :title="'ПОИСК ОФФИСА'"
+        :title="'ПОИСК ОФФИСА' + page"
         :fields="filterFields"
         :has-result="!!coworkings"
         @getCoworkings="getCoworkings"
     />
     <div class="offices-result" :class="{'offices-result_animate': coworkings}">
-      <KoworkingResultList :coworkings="coworkings"/>
+      <KoworkingResultList :coworkings="coworkings" v-model:page="page"/>
     </div>
   </div>
 </template>
@@ -16,8 +16,11 @@
 <script setup lang="ts">
 import KoworkingFilters from '../../components/blocks/KoworkingFilters.vue'
 import { useOffices } from './composables'
+import { ref } from 'vue'
+
 
 const {
+  page,
   coworkings,
   filterFields,
   getCoworkings

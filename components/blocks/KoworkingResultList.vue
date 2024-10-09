@@ -23,17 +23,20 @@
       <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
       <KoworkingCard :koworking="koworking" v-for="koworking of coworkings"/>
     </div>
+    <LPagination :total="45" v-model="page"/>
   </div>
 </template>
 
 <script setup lang="ts">
-import { defineProps, type PropType } from 'vue'
+import { defineModel, defineProps, type PropType } from 'vue'
 
 defineProps({
   coworkings: {
     type: Object as PropType<any>
   }
 })
+
+const page = defineModel('page', { default: 1 })
 
 </script>
 

@@ -1,10 +1,11 @@
 import { useRoute } from 'nuxt/app'
 import { ref } from 'vue'
-import OfficesService from '../services/index'
 import { FilterFields } from '../../../shared/constants/enums'
+import OfficesApi from '../api'
 
 export function useOffices() {
 	const route = useRoute()
+	const page = ref(1)
 	const coworkings = ref<any>(null)
 
 	const filterFields = [
@@ -22,13 +23,14 @@ export function useOffices() {
 
 	async function getCoworkings() {
 		const params = route.query
-		OfficesService.getOffices(params)
+		OfficesApi.getOffices(params)
 			.then(res => {
 				coworkings.value = coworkings.value ? null : res
 			})
 	}
 
 	return {
+		page,
 		coworkings,
 		filterFields,
 		getCoworkings

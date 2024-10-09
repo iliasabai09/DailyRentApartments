@@ -12,9 +12,8 @@
       <div class="detail-rating">
         <UiRatingStar :rating="3"/>
       </div>
-      <div class="detail-review">26 отзывов</div>
       <UiReviewsItem/>
-      <div class="detail-type TTitleMedium">Офис</div>
+      <div class="detail-type TTextMedium">Офис</div>
       <UiPrice/>
       <div class="detail-description TSmall">{{ koworking.description }}</div>
       <UiLocationItem/>
