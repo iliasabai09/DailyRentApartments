@@ -13,9 +13,7 @@
 
 <script setup lang="ts">
 import { koworkingFilters } from '../koworking/constants'
-import { navigateTo, useRoute } from 'nuxt/app'
-
-const route = useRoute()
+import { navigateTo } from 'nuxt/app'
 
 async function getCoworkings() {
   navigateTo('/koworking')

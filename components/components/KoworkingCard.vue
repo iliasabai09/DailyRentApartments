@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-      :to="`/offices/${koworking.id}`"
+      :to="`/koworking/${category}/${koworking.id}`"
       :class="{
         vipCard: false,
       }"
@@ -26,7 +26,10 @@ import { defineProps, type PropType } from 'vue'
 import UiPrice from '../ui/UiPrice.vue'
 import UiLocationItem from '../ui/UiLocationItem.vue'
 import UiReviewsItem from '../ui/UiReviewsItem.vue'
+import { useRoute } from 'nuxt/app'
 
+const route = useRoute()
+const category = route.params.category
 defineProps({
   koworking: {
     type: Object as PropType<any>
