@@ -22,7 +22,7 @@
 import { defineProps, type PropType, ref } from 'vue'
 import { useRouter } from 'nuxt/app'
 
-defineProps({
+const props = defineProps({
   title: {
     type: String,
     required: true
@@ -31,6 +31,11 @@ defineProps({
     type: Object as PropType<{ field: string, options: string[], label: string }[]>
   },
   hasResult: {
+    type: Boolean,
+    required: false,
+    default: false
+  },
+  fromKoworking: {
     type: Boolean,
     required: false,
     default: false
@@ -46,7 +51,9 @@ const model = ref({
 
 
 function navigateParams() {
+
   router.push({
+    path: props.fromKoworking ? '/koworking' : '',
     query: {
       ...model.value
     }

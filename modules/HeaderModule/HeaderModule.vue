@@ -13,10 +13,10 @@ import HeaderDesktop from './view/HeaderDesktop.vue'
 import { useHeaderModule } from './composables'
 
 const links = [
-  {title: 'РАБОЧЕЕ МЕСТО', link: 'workSpaces'},
-  {title: 'ПЕРЕГОВОРНЫЕ', link: 'negotiations'},
-  {title: 'КОНФЕРЕНС ЗАЛЫ', link: 'conference'},
-  {title: 'ОФИСЫ', link: 'offices'}
+  {title: 'РАБОЧЕЕ МЕСТО', link: '/koworking/workSpaces'},
+  {title: 'ПЕРЕГОВОРНЫЕ', link: '/koworking/negotiations'},
+  {title: 'КОНФЕРЕНС ЗАЛЫ', link: '/koworking/conference'},
+  {title: 'ОФИСЫ', link: '/koworking/offices'}
 ]
 
 const {
