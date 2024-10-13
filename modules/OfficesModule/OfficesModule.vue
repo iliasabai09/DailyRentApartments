@@ -16,8 +16,6 @@
 <script setup lang="ts">
 import KoworkingFilters from '../../components/blocks/KoworkingFilters.vue'
 import { useOffices } from './composables'
-import { ref } from 'vue'
-
 
 const {
   page,
