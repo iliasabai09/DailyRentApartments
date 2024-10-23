@@ -3,6 +3,7 @@
     <div class="filters">
       <div class="filters-title THeadLarge">{{ title }}</div>
       <div class="filters-selects">
+
         <v-select
             class="filters-select"
             v-for="select in fields"

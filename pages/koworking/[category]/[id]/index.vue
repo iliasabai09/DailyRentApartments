@@ -1,15 +1,15 @@
 <template>
   <div class="container">
     <div class="detail">
-      <h1 class="THeadMedium detail-title">Коворкинг центр Токио {{ activeTab === 'negotiations' }}</h1>
+      <h1 class="THeadMedium detail-title">Коворкинг центр Токио</h1>
       <div class="line"></div>
       <KoworkingDetail/>
       <div class="line"></div>
       <div class="detail-tabs">
-        <koworking-place-tab type="workSpace" :active="activeTab === 'workSpaces'"/>
-        <koworking-place-tab type="conference" :active="activeTab === 'conference'"/>
-        <koworking-place-tab type="office" :active="activeTab === 'offices'"/>
-        <koworking-place-tab type="negotiation" :active="activeTab === 'negotiations'"/>
+        <koworking-place-tab :id="route.params.id" type="workspace" :active="route.params.category === 'workspace'"/>
+        <koworking-place-tab :id="route.params.id" type="conference" :active="route.params.category === 'conference'"/>
+        <koworking-place-tab :id="route.params.id" type="offices" :active="route.params.category === 'offices'"/>
+        <koworking-place-tab :id="route.params.id" type="negotiation" :active="route.params.category === 'negotiation'"/>
       </div>
     </div>
   </div>
@@ -22,8 +22,6 @@ import { ref } from 'vue'
 import { useRoute } from 'nuxt/app'
 
 const route = useRoute()
-
-const activeTab = ref(route.params.category)
 
 </script>
 
